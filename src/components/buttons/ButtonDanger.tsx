@@ -1,0 +1,48 @@
+import { useState } from "react";
+
+interface BtnProps {
+  innerText: string;
+  size: "sm" | "md" | "mobile" | "HACCP";
+  disabled?: boolean;
+  loading?: string;
+  focus?: boolean;
+}
+
+const sizeClasses: Record<BtnProps["size"], string> = {
+  sm: "px-3 py-1 text-sm",
+  md: "px-5 py-2 text-base",
+  mobile: "w-full py-3 text-base",
+  HACCP: "w-full py-5 text-xl",
+};
+
+const btnStandard = `bg-danger-600 text-white rounded-lg cursor-pointer hover:bg-danger-800 transition-colors duration-100 font-semibold`;
+const disabledStyle =
+  "bg-neutral-300 text-neutral-950 disabled:opacity-50 disabled:cursor-not-allowed rounded-lg font-semibold";
+const focus = "ring-2 ring-brand-700 ring-offset-2";
+
+const ButtonDanger = function (props: BtnProps) {
+  const [marcato, setMarcato] = useState(false);
+  return (
+    <button
+      type="button"
+      disabled={props.disabled || Boolean(props.loading)}
+      className={`${!props.disabled ? btnStandard : ""} ${sizeClasses[props.size]} ${marcato ? focus : ""} ${props.disabled ? disabledStyle : ""} `}
+      onClick={() => {
+        if (props.focus) {
+          setMarcato(!marcato);
+        }
+      }}
+    >
+      {props.loading ? (
+        <>
+          <span className="inline-block size-4 animate-spin rounded-full border-2 border-current border-t-transparent mr-2" />
+          {props.loading}
+        </>
+      ) : (
+        props.innerText
+      )}
+    </button>
+  );
+};
+
+export default ButtonDanger;

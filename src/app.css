@@ -1,0 +1,75 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "IBM Plex Sans", system-ui, sans-serif;
+  --font-display: "Fraunces", Georgia, serif; /* solo variante B */
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  /* ARANCIO */
+  --color-brand-50: #fff8f1;
+  --color-brand-100: #ffeedc;
+  --color-brand-200: #ffd9b3;
+  --color-brand-300: #ffc086;
+  --color-brand-400: #fda25a;
+  --color-brand-500: #f5862f;
+  --color-brand-600: #db6a18;
+  --color-brand-700: #b45314;
+  --color-brand-800: #8c4015;
+  --color-brand-900: #6b3314;
+  /* BLU */
+  --color-secondary-50: #f0f6fd;
+  --color-secondary-100: #dceafa;
+  --color-secondary-200: #bcd6f4;
+  --color-secondary-300: #8db9eb;
+  --color-secondary-400: #5a96df;
+  --color-secondary-500: #3778ce;
+  --color-secondary-600: #265fb2;
+  --color-secondary-700: #214c8f;
+  --color-secondary-800: #1f4175;
+  --color-secondary-900: #1d3761;
+  /* VERDE */
+  --color-success-50: #f0faf3;
+  --color-success-100: #dcf3e3;
+  --color-success-200: #bae6c9;
+  --color-success-300: #8bd2a6;
+  --color-success-400: #56b87e;
+  --color-success-500: #339c60;
+  --color-success-600: #237f4b;
+  --color-success-700: #1e653e;
+  --color-success-800: #1b5134;
+  --color-success-900: #17432c;
+  /* GIALLO */
+  --color-warning-50: #fffbeb;
+  --color-warning-100: #fef3c7;
+  --color-warning-200: #fde68a;
+  --color-warning-300: #fcd34d;
+  --color-warning-400: #fbbf24;
+  --color-warning-500: #e5a900;
+  --color-warning-600: #c08a00;
+  --color-warning-700: #936900;
+  --color-warning-800: #735208;
+  --color-warning-900: #5e440d;
+  /* ROSSO */
+  --color-danger-50: #fef3f2;
+  --color-danger-100: #fee4e2;
+  --color-danger-200: #fecdca;
+  --color-danger-300: #fca5a0;
+  --color-danger-400: #f6716a;
+  --color-danger-500: #e8483f;
+  --color-danger-600: #cf3128;
+  --color-danger-700: #ad2620;
+  --color-danger-800: #8f231e;
+  --color-danger-900: #76221e;
+  --color-neutral-50: #faf8f5;
+  /* DA BIANCO A GRIGIO SCURO */
+  --color-neutral-100: #f4f0eb;
+  --color-neutral-200: #e8e2da;
+  --color-neutral-300: #d6cdc2;
+  --color-neutral-400: #b3a799;
+  --color-neutral-500: #8c8073;
+  --color-neutral-600: #6b6157;
+  --color-neutral-700: #524a42;
+  --color-neutral-800: #38322d;
+  --color-neutral-900: #231f1c;
+  --color-neutral-950: #171412;
+}

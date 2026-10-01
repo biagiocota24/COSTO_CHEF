@@ -28,7 +28,7 @@ const Sidebar = function () {
 
   return (
     <aside
-      className={`absolute z-100 md:sticky top-0 h-screen py-36.5 md:p-0 ${open ? "w-60 z-100 fixed" : "w-8"} transition-all duration-600 shrink-0 bg-brand-400 dark:bg-neutral-900`}
+      className={`absolute z-100 md:sticky top-0 h-screen py-36.5 md:p-0 ${open ? "w-60 z-100 fixed" : "w-8 fixed"} transition-all duration-600 shrink-0 bg-brand-400 dark:bg-neutral-900`}
     >
       <div className={`flex flex-col`}>
         <div

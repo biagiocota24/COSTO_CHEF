@@ -8,6 +8,7 @@ import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 const MyNavbar = function () {
   const [open, setOpen] = useState<boolean>(false);
   const [aziendaOpen, setAziendaOpen] = useState<boolean>(false);
+  const [profileOpen, setProfileOpen] = useState<boolean>(false);
   return (
     <header className="sticky top-0 z-200 bg-white dark:bg-neutral-800">
       <div className="flex items-center justify-between h-full px-2">
@@ -101,12 +102,22 @@ const MyNavbar = function () {
             </button>
           </div>
           {/* PROFILO ECC... */}
-          <div>
+          <div className="flex items-center">
             <button className={`me-4 text-2xl cursor-pointer`}>
-                <IoIosNotifications />
-              </button>
-            <button>
-              <FaCircleUser className="me-4 text-2xl cursor-pointer" />
+              <IoIosNotifications />
+            </button>
+            <button
+              className="flex items-center dark:hover:text-neutral-300 hover:text-neutral-500 cursor-pointer"
+              onClick={() => setProfileOpen(!profileOpen)}
+            >
+              <FaCircleUser className="me-1 text-2xl" />
+              <div className="text-[8px] flex flex-col items-start">
+                <span>Nome utente</span>
+                <span>ruolo utente</span>
+              </div>
+              <span>
+                {profileOpen ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
+              </span>
             </button>
           </div>
         </div>

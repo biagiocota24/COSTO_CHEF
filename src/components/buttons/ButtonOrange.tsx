@@ -2,7 +2,7 @@ import { useState } from "react";
 
 interface BtnProps {
   innerText: string;
-  size: "sm" | "md" | "mobile" | "HACCP";
+  size: "sm" | "md" | "mobile" | "HACCP" | "responsive";
   disabled?: boolean;
   loading?: string;
   focus?: boolean;
@@ -13,6 +13,7 @@ const sizeClasses: Record<BtnProps["size"], string> = {
   md: "px-5 py-2 text-base",
   mobile: "w-full py-3 text-base",
   HACCP: "w-full py-5 text-xl",
+  responsive: "px-3 py-2 text-sm md:px-5 md:py-2 md:text-base",
 };
 
 const btnStandard = `bg-brand-700 text-white rounded-lg border cursor-pointer hover:bg-brand-900 transition-colors duration-100 font-semibold`;

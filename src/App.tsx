@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import Ingredienti from "./pages/Ingredienti";
 import ButtonProva from "./components/Button";
+import MainLayout from "./MainLayout";
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
         <Route path="/login" element={<Dashboard />}></Route>
         <Route path="/registrazione" element={<Dashboard />}></Route>
         {/* DASHBOARD */}
-        <Route path="/" element={<Dashboard />}></Route>
+        <Route path="/" element={<MainLayout />}></Route>
         {/* Lista ingredienti	Tabella con ricerca, filtro per categoria e sottoscorta, barra della giacenza, costo unitario */}
         <Route path="/ingredienti" element={<Ingredienti />}></Route>
         {/* Form ingrediente	Nome, categoria, unità base, resa, peso medio pezzo, scorta minima, allergeni (checkbox) */}
